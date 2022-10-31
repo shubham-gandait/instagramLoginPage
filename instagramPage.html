@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function instFunction() {
+            var username = document.getElementById("numberOrEmail").value;
+            if (username == "") {
+                document.getElementById("numberOrEmail").style.border = "1px solid red";
+                document.getElementById("massge").innerHTML = " enter the username";
+                document.getElementById("massge").style.color = "red";
+            }
+            else {
+                document.getElementById("numberOrEmail").style.border = " 1px solid green";
+                document.getElementById("massge").innerHTML = "";
+                document.getElementById("massge").style.color = "green";
+                document.getElementById("submit").disabled = "true";
+            }
+            var pass = document.getElementById("pass").value;
+            if (pass.length < 8) {
+                document.getElementById("pass").style.border = "1px solid red";
+                document.getElementById("errarmassage").innerHTML = "Password is 8 digit ";
+                document.getElementById("errarmassage").style.color = "red";
+            }
+            else {
+                document.getElementById("pass").style.border = "1px solid green";
+                document.getElementById("errarmassage").innerHTML = "";
+                document.getElementById("errarmassage").style.color = "green";
+                document.getElementById("submit").disabled = "true";
+            }
+
+            if(username != "" && pass.length >= 8){
+                document.getElementById("submit").removeAttribute('disabled'); 
+            }
+        }
+
+
+    </script>
+    <style>
+        .main {
+            float: left;
+            margin-right: 40px;
+            margin-left: 180px;
+            margin-top: 20px;
+
+        }
+
+        .side {
+            width: 350px;
+            height: 450px;
+            float: left;
+            margin-top: 30px;
+            margin-bottom: 10px;
+
+        }
+
+        .cen {
+            text-align: center;
+            margin: 5px;
+        }
+
+        .dive {
+            float: left;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="main">
+        <img src="image/insta.png" ; style="width:400px; height:500px;">
+    </div>
+
+    <div class="side">
+
+        <div class="cen">
+            <div style="border:1px solid rgb(235, 224, 224);">
+                <img src="image/7a252de00b20.png" ;
+                    style="width:200px; height: 50px; margin-top: 20px; margin-bottom:20px;">
+
+                <input type="text" id="numberOrEmail" placeholder="phone Number,Username,Or Email"
+                    onkeydown="instFunction()">
+                <br />
+                <p id="massge"></p>
+                <input type="password" id="pass" placeholder="passoword" onkeydown="instFunction()">
+                <p id="errarmassage"></p>
+                <br />
+                <br />
+
+                <a href="https://www.instagram.com/s_gandaiet/"><button id="submit"  style="background-color: rgb(120, 120, 221); width:200px; height: 25px; "
+                    disabled>Log
+                    in </button></a>
+                <br />
+
+                <P>Or</P>
+                <p><img src="image/facebook.jpg" style="height: 14px; width:15px;">log in With Facebook</p>
+                <p>Forget Password</p>
+            </div>
+
+        </div>
+
+
+        <div style="border:1px solid rgb(235, 224, 224); width: 340px; margin-left: 5px;">
+            <p>Don't have an account? Sign up</p>
+        </div>
+        <p class="cen">Get the app</p>
+        <center>
+            <img src="image/app.jpg" ; style="height:40px; width:120px; margin-right:25px;" ;>
+
+            <img src="image/appGoogle.jpg" ; style="height: 40px; width:120px; float: left; margin-left:20px;" ;>
+        </center>
+    </div>
+
+</body>
+
+</html>
